@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Code Rocks - A Gemstone-Themed Numerical Guessing Game</title>
+	<link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/meyer_reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
@@ -12,54 +13,44 @@
 <body>
 
 
-	<div id="instructions">
-		
-	</div>
+
 
 
 	<div id="gameDisplay">
 
+		<header>
 
+			<h1>Code Rocks.</h1>
+			<h2>a Gemstone-themed Game of Blackjack</h2>
+
+			<div id="instructions">
+				
+			</div>
+
+		</header>
+		
 		<div id="targetNumber">
 			<p>Target Score: <span></span></p>
 		</div>
 
-
-		<div id="gemstones">
-
-			<div id="gem-1" class="gemstone">
-				<img src="assets/images/ruby.jpg" alt="" value="" />
-			</div>
-
-			<div id="gem-2" class="gemstone">
-				<img src="assets/images/emerald.jpg" alt="" value="" />
-			</div>
-
-			<div id="gem-3" class="gemstone">
-				<img src="assets/images/sapphire.jpg" alt=""  />
-			</div>
-
-			<div id="gem-4" class="gemstone">
-				<img src="assets/images/diamond.png" alt="" />
-			</div>
-
-		</div>
-
+		<div id="gemstones"></div>
 
 		<div id="playerScore">
-			<p>Player Score: <span>0</span></p>
+			<p>Current Score: <span>0</span></p>
+		</div>
+
+		<div id="totalWins">
+			<p>Total Wins: <span>0</span></p>
+		</div>
+
+		<div id="totalLosses">
+			<p>Total Losses: <span>0</span></p>
 		</div>
 
 	</div>
 
 
-	<div id="totalWins">
-		<p>Total Wins: <span>0</span></p>
-	</div>
-
-	<div id="totalLosses">
-		<p>Total Losses: <span>0</span></p>
-	</div>
+	
 
 
 

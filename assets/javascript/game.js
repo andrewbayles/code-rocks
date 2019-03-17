@@ -4,8 +4,8 @@
 
 // The user's score is reset to zero every new game, as is the user's randomly generated target value.
 
-const totalWins = 0;
-const totalLosses = 0;
+var totalWins = 0;
+var totalLosses = 0;
 
 function gameWin() {
 	totalWins++;
@@ -29,40 +29,36 @@ function newGame() {
 
 	var randomTargetScore = Math.floor( Math.random() * 100 ) + 20;
 	var userScore = 0;
+	$("#playerScore span").text( 0 );
+	var gemImageSrcNum;
 
 	$("#targetNumber span").text( randomTargetScore ); // Update the displayed target score.
-
 	$("#gemstones").empty(); // Clear any existing displayed gemstones.
 
 
-	for ( var i = 0; i < gemImages.length; ) { // Generate four random gemstone images.
-
-		var gemImageSrcNum = Math.floor( Math.random() * i ); // POSSIBLE BUG.
-		var gemImageSource = "assets/images/" + gemImages[gemImageSrcNum]; // POSSIBLE BUG.
-		gemImages = gemImages.splice( gemImageSrcNum, 1 ); // POSSIBLE BUG.
-
-		$("#gemstones").append( '<img id="gem-' + gemImageSrcNum + '" class="gemstone" src="' + gemImageSource + '" alt="" />' );
-
-	}
-
-	/*
-	var gemValues = [];
-	for ( var i = 4; i > 0; i-- ) { // Generate random values for each gem, between 1 and 12.
-		gemValues[i] = Math.floor( Math.random() * 11 ) + 1;
-	}
-	*/
-
-	/*
-	for ( var i = 0; i < gemImages.length; i-- ) { // Assign the gems' values to each of the gems' clickable images.
+	for ( var i = 0; i < gemImages.length; i++ ) { // Generate four random gemstone images.
+		gemImageSrcNum = Math.floor( Math.random() * gemImages.length );
+		var gemImageSource = "assets/images/" + gemImages[gemImageSrcNum];
 
 		
+		// gemImages.splice( gemImageSrcNum, 1 ); // DEFINITE BUG. Trying to remove the image from the gemImages array by its index.
+
+
+		$("#gemstones").append( '<img class="gemstone" src="' + gemImageSource + '" alt="' + gemImageSrcNum + '" style="width:25%; height:25%;" />' );
 	}
-	*/
+
+
+	var gemValues = [];
+	for ( var i = 3; i > 0; i-- ) { // Generate random values for each gem, between 1 and 12.
+		gemValues[i] = Math.floor( Math.random() * 11 ) + 1;
+	}
+	gemValues[0] = Math.floor( Math.random() * 11 ) + 1; // Workaround. Should be included in above loop.
+
 
 	$(".gemstone").on( 'click', function(){ 
 
-		//userScore +=  ; // Add the gem's value to the user's score for this game.
-
+		var gemValueNum = gemValues[$(this).attr( "alt" )];
+		userScore += gemValueNum; // Add the gem's value to the user's score for this game.
 		$("#playerScore span").text( userScore ); // Update the user's score display.
 
 		if ( userScore === randomTargetScore ) {
