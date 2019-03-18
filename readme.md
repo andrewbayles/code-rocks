@@ -13,3 +13,11 @@ Code Rocks is a simple, Blackjack-style game in which the player tries to match 
 * A game is won when the player's score matches the target score.
 
 * A game is lost if the player's score goes above the target.
+
+### Acknowledgements
+
+This code was written with the help of *Eric Meyer's CSS Reset*, located at https://cssreset.com/scripts/eric-meyer-reset-css/ .
+
+### Contacts
+
+This code is written and maintained by **Andrew Bayles** at baylesnet@gmail.com and http://baylesdev.com .
