@@ -1,17 +1,15 @@
-# jQuery Assignment
+# Code Rocks.
 
 ### Overview
 
-In this assignment, you'll create another fun and interactive game for web browsers. This time, your app must dynamically update your HTML pages with the jQuery library.
+Code Rocks is a simple, Blackjack-style game in which the player tries to match their score to a target score without going over. This is done by clicking one of four randomly displayed gems each game -- each gem type worth a different, random value -- until the target score is hit.
 
-### Submission on BCS
+### A Few Things To Remember:
 
-* Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!
+* Since the same type of gem can appear more than once in each game, each gem **type** is worth a certain value -- not each individual gem.
 
-### Before You Begin
+* The player is never shown the gem values.
 
-1. Read these instructions all the way through.
-   
-2. Create a new GitHub repo, give it a good name for the game you are building , then clone it to your computer.
+* A game is won when the player's score matches the target score.
 
-3. Inside the cloned folder, create an `index.html` file.
+* A game is lost if the player's score goes above the target.
