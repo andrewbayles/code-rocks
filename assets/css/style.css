@@ -16,6 +16,16 @@ header {
 	margin-top: 6rem;
 }
 
+#playerInfo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#playerInfo div {
+	width: 30%;
+}
+
 h1 {
 	font-family: 'Pinyon Script', cursive;
 	font-size: 5.5rem;
@@ -24,10 +34,24 @@ h1 {
 
 h2 {
 	font-size: 1.4rem;
+	font-style: italic;
     color: #555555;
     margin-bottom: 2rem;
 }
 
 p {
 	line-height: 2rem;
+}
+
+#targetNumber p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+#playerScore p {
+	font-weight: bold;
+}
+
+#totalWins p, #totalLosses p {
+	color: #aaaaaa;
 }
