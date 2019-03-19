@@ -80,10 +80,21 @@ p {
 #instInner h4 {
 	font-size: 1.2rem;
     margin: 10px 0px;
+    font-weight: bold;
 }
 
 #instInner p {
+	line-height: 1.6rem;
+}
 
+#instInner ul {
+	list-style-type: disc;
+}
+
+#instInner li {
+	line-height: 1.6rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
 
 button#instOpen {
