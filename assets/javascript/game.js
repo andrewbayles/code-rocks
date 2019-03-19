@@ -34,7 +34,16 @@ function newGame() {
 
 	$("#targetNumber span").text( randomTargetScore ); // Update the displayed target score.
 	$("#gemstones").empty(); // Clear any existing displayed gemstones.
+	
+	$("#instWindow").css( "display", "none" ); // Close the instructions window, if it is still open.
+	
+	$("#instClose").on( "click", function(){ 
+		$("#instWindow").css( "display", "none" );
+	});
 
+	$("#instOpen").on( "click", function(){ 
+		$("#instWindow").css( "display", "block" );
+	});
 
 	for ( var i = 0; i < gemImages.length; i++ ) { // Generate four random gemstone images.
 		gemImageSrcNum = Math.floor( Math.random() * gemImages.length );

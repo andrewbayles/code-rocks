@@ -55,3 +55,50 @@ p {
 #totalWins p, #totalLosses p {
 	color: #aaaaaa;
 }
+
+#instWindow {
+	display: none;
+	position: fixed;
+    height: 50%;
+    left: 50%;
+}
+
+#instInner {
+	position: relative;
+	left: -50%;
+	background-color: #eeeeee;
+    padding: 20px;
+    border: 7px solid #cccccc;
+}
+
+#instInner h3 {
+	font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#instInner h4 {
+	font-size: 1.2rem;
+    margin: 10px 0px;
+}
+
+#instInner p {
+
+}
+
+button#instOpen {
+	margin-top: 10px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+#instClose {
+	float: right;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: indianred;
+    color: #ffffff;
+    border: 2px solid #fff;
+}
+
