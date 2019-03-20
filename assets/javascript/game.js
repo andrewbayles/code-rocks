@@ -50,7 +50,7 @@ function newGame() {
 		var gemImageSource = "assets/images/" + gemImages[gemImageSrcNum];
 
 		
-		// gemImages.splice( gemImageSrcNum, 1 ); // DEFINITE BUG. Trying to remove the image from the gemImages array by its index.
+		// gemImages.splice( gemImageSrcNum, 1 ); Trying to remove the image from the gemImages array by its index.
 
 
 		$("#gemstones").append( '<img class="gemstone" src="' + gemImageSource + '" alt="' + gemImageSrcNum + '" style="width:25%; height:25%;" />' );
