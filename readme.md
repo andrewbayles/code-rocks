@@ -4,6 +4,8 @@
 
 Code Rocks is a simple, Blackjack-style game in which the player tries to match their score to a target score without going over. This is done by clicking one of four randomly displayed gems each game -- each gem type worth a different, random value -- until the target score is hit.
 
+This app is deployed on GitHub at https://andrewbayles.github.io/code-rocks/
+
 ### A Few Things To Remember:
 
 * Since the same type of gem can appear more than once in each game, each gem **type** is worth a certain value -- not each individual gem.
